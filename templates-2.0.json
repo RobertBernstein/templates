@@ -58,6 +58,28 @@
 		},
 		{
 			"type": 1,
+			"title": "bukkit",
+			"description": "bukkit Minecraft Server",
+			"categories": [
+				"Minecraft"
+			],
+			"platform": "linux",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
+			"image": "cmunroe/bukkit:latest",
+			"name": "mc_server",
+			"env": [{
+				"EULA": "true"
+			}],
+			"ports": [
+				"25565/tcp"
+			],
+			"restart_policy": "always",
+			"volumes": [{
+				"container": "/data"
+			}]
+		},
+		{
+			"type": 1,
 			"title": "Caddy",
 			"description": "HTTP/2 web server with automatic HTTPS",
 			"categories": [
